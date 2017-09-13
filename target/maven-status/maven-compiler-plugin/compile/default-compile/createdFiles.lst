@@ -1,0 +1,8 @@
+com/arief/web/controllers/RegistrasiPersonController.class
+com/arief/web/controllers/LoginPersonController.class
+com/arief/web/controllers/ListPersonController.class
+com/arief/web/filters/WebFilters.class
+com/arief/web/jdbc/operation/PersonDAO.class
+com/arief/web/jdbc/ConnectionDataSource/CreateConection.class
+com/arief/web/entity/Person.class
+com/arief/web/jdbc/operation/CRUDPersonDaoImpl.class

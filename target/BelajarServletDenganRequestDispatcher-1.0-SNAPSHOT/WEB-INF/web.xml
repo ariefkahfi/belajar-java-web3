@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0"
+>
+
+    <servlet>
+        <servlet-name>login-person</servlet-name>
+        <servlet-class>com.arief.web.controllers.LoginPersonController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>login-person</servlet-name>
+        <url-pattern>/person/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>list-person</servlet-name>
+        <servlet-class>com.arief.web.controllers.ListPersonController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>list-person</servlet-name>
+        <url-pattern>/person/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registrasi-person</servlet-name>
+        <servlet-class>com.arief.web.controllers.RegistrasiPersonController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>registrasi-person</servlet-name>
+        <url-pattern>/register/person</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>delete-person</servlet-name>
+        <servlet-class>com.arief.web.controllers.DeletePersonController</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>delete-person</servlet-name>
+        <url-pattern>/person/list/delete</url-pattern>
+    </servlet-mapping>
+
+    
+    <servlet>
+        <servlet-name>update-person</servlet-name>
+        <servlet-class>com.arief.web.controllers.UpdatePersonController</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>update-person</servlet-name>
+        <url-pattern>/person/list/update</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>filter-person</filter-name>
+        <filter-class>com.arief.web.filters.WebFilters</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>filter-person</filter-name>
+        <url-pattern>/person/list/*</url-pattern>
+    </filter-mapping>
+
+    <error-page>
+        <error-code>403</error-code>
+        <location>/errors/Access-Forbidden.html</location>
+    </error-page>
+
+</web-app>
